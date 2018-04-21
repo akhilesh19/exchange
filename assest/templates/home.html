@@ -1,0 +1,77 @@
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login101">
+				<style>
+					table {
+					    font-family: arial, sans-serif;
+					    border-collapse: collapse;
+					    width: 100%;
+					}
+
+					td, th {
+					    border: 1px solid #dddddd;
+					    text-align: left;
+					    padding: 8px;
+					}
+
+					tr:nth-child(even) {
+					    background-color: #dddddd;
+					}
+					</style>
+					<span class="login100-form-title">
+						Details of user
+					</span>
+				<!-- <select>
+				  <option ng-change="selectCurrency(currency)" ng-repeat="curr in currencyList" ng-model="currency">{{curr.currency}}</option>
+				</select> -->
+
+				<select  ng-model="selectedCurrency" ng-init=" selectedCurrency = currencyList[1].currency" ng-options="currency as currency.currency for currency in currencyList" 
+   ng-change="selectCurrency()" >
+   	
+   	 <option value=""> Select Currency </option>
+   </select>
+
+					<table>
+					  <tr>
+					    <th>User id</th>
+					    <th>Email id</th>
+					    <th>Private address</th>
+					    <th>Currency</th>
+					    <th>Private Key</th>
+					     <th>Identity</th>
+					  </tr>
+					  <tr dir-paginate="info in data| itemsPerPage: 8">
+					    <td>{{info.userId}}</td>
+					     <td>{{info.email}}</td>
+					      <td>{{info.address}}</td>
+					    <td>{{info.currency}}</td>
+					    <td>{{info.privateKey}}</td>
+					    <td>{{info.identity}}</td>
+
+
+					  </tr>
+					</table>
+					  <div style="text-align:center;">
+                                           <dir-pagination-controls
+                                                boundary-links="true"
+                                                direction-links="true" >
+                                            </dir-pagination-controls>
+                                        </div>
+								
+			</div>
+		</div>
+
+  
+<!--   <div id="myDiv" style="width: 480px; height: 400px;"></div> -->
+
+
+
+
+
+
+
+
+
+
+	</div>
