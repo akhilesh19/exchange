@@ -1,4 +1,5 @@
 app.controller('homeCtrl', function($scope, $state, userServices, toastr,$timeout) {
+        if(localStorage.getItem('_id')){
 $scope.selectedCurrency ={}
 
     $scope.selectCurrency = ()=>{
@@ -65,6 +66,15 @@ $scope.selectCurrency();
 // };
 
 // Plotly.newPlot('myDiv', data, layout);
+
+$scope.logout = ()=>{
+    localStorage.removeItem('_id');
+    toastr.success('Logout successfully.')
+    $state.go('login')
+}
+}else {
+    $state.go('login')
+}
 
 
 

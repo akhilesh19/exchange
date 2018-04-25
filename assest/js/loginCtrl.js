@@ -14,6 +14,7 @@ $scope.login = ()=> {
         console.log("success",success.data)
       if(success.data.responseCode == 200){   
           toastr.success(success.data.responseMessage);
+         localStorage.setItem('_id',success.data.data._id)
          $state.go('home');
       }else{
          toastr.error("Connection error.");
