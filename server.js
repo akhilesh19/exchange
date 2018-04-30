@@ -60,9 +60,9 @@ async.forEachLimit(successed[0].currencyData, 1, function(item, next) {
   console.log("count=====>>>",succ)
   console.log("job start.",typeof item,item)
   succ = succ?succ:1
-request('http://199.188.204.100:5001/exchanges/api/v1/address/getPrivateKeyBTC?currency='+item.currency+'&skip='+succ+'&phrase=test123walletphrase',
+request('http://199.188.204.100:5001/exchanges/api/v1/address/getPrivateKeyBTC?currency='+item.currency+'&skip='+succ+'&phrase='+item.walletPhrase,
  function (error, response, body) {
-//  console.log('body:',typeof body ,body =JSON.parse(body));
+ console.log('body:',typeof body ,body =JSON.parse(body));
   if(body.responseCode != 400)
   {
 

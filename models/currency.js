@@ -12,7 +12,8 @@ name:{type:String,sparse:true}, //currency name (rupees/US_dollor/repple/etc...)
 currency:{type:String,sparse:true}, // inr/usd/eur/etc...
 transectionCharge:{type:Number,default:0.1},
 market:{type:Boolean,default:false},
-info:{type:String}
+info:{type:String},
+walletPhrase:{type:String}
 }]
 },{strict:false});
 
