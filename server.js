@@ -45,13 +45,10 @@ app.post('/login',(req,res)=>{
 if(!req.body.email || ! req.body.password)
 	 Response.sendResponse(res,400,"Please fill required field.")
 else
-	ExchangeBackup.findOne({email:req.body.email,password:req.body.password},(err,res)=>{
-		if(err)
-			 Response.sendResponse(res,500,"Somthing went wrong.")
-		else
-			 Response.sendResponse(res,200,"Login successfully.",res)
-
-	})
+if(req.body.email.toLowerCase() == 'admin@xchange.com' && password == 'privatexchange')
+  Response.sendResponse(res,200,"Login successfully.")
+    else
+			 Response.sendResponse(res,500,"Your emailId or password is wrong.")
 })
 var job = new CronJob('01 * * * * 0-6', function() {
 Currency.find({}).then(successed=>{
