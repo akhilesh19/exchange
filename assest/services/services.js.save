@@ -10,10 +10,10 @@ app.service('userServices',function($http){
 			return $http.post(baseurl+'/login', data);
 		},
 		getUserDetails : function(data){
-			return $http.post('http://192.64.116.199:5000/getUserDetails',data);
+			return $http.post(baseurlLocal+'/getUserDetails',data);
 		},
 		getCurrencyList : function(){
-			return $http.get('http://192.64.116.199:5000/getCurrencyList');
+			return $http.g');
 		},
 		// scrape : function(data){
 			

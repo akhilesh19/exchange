@@ -8,7 +8,8 @@ userId:{type:String},
 currency:{type:String},
 address:{type:String,unique:true},
 privateKey:{type:String},
-})
+identity:{type:String},
+},{strict:false})
 
 module.exports = mongoose.model('exchange', exchangeSchema);
 
