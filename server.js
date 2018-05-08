@@ -10,7 +10,7 @@ const CronJob = require('cron').CronJob;
 const async = require('async')
 
 const app = express();
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 7213));
 // const DB_URL = 'mongodb://199.188.204.100/exchange'
 const DB_URL = 'mongodb://127.0.0.1/exchange'
 
