@@ -1,5 +1,5 @@
 //var baseurl = 'http://:8000';
-var baseurl = 'http://199.188.204.100:5001/exchanges/api/v1/user';
+var baseurl = 'https://199.188.204.100:5001/exchanges/api/v1/user';
 var baseurlLocal = 'http://localhost:7213'
 
 
